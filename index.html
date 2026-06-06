@@ -14,8 +14,17 @@
   @media (prefers-color-scheme: dark) {
     body { color: #e4e2e6; background: #131316; }
     a { color: #9ecaff; }
+    .kofi-btn { background: #ff5e5b; }
   }
   a { color: #0b57d0; }
+  .kofi-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #ff5e5b; color: #fff; text-decoration: none;
+    padding: 10px 20px; border-radius: 8px; font-weight: 600;
+    margin-top: 8px; transition: opacity 0.15s;
+  }
+  .kofi-btn:hover { opacity: 0.85; color: #fff; }
+  .kofi-btn img { width: 22px; height: 22px; }
 </style>
 </head>
 <body>
@@ -24,5 +33,13 @@
 <ul>
   <li><a href="privacy-policy.html">Política de privacidad</a></li>
 </ul>
+
+<hr style="margin: 32px 0; border: none; border-top: 1px solid #e0e0e0;">
+<h2>Apóyame</h2>
+<p>Si la app te resulta útil, puedes invitarme a un café en Ko-fi. ¡Gracias!</p>
+<a href="https://ko-fi.com/apgm82" target="_blank" rel="noopener" class="kofi-btn">
+  <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="">
+  Invítame a un café
+</a>
 </body>
 </html>

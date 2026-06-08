@@ -3,43 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mana - MTG Archive</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6; max-width: 640px; margin: 0 auto; padding: 48px 18px;
-    color: #1b1b1f; background: #fff;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e4e2e6; background: #131316; }
-    a { color: #9ecaff; }
-    .kofi-btn { background: #ff5e5b; }
-  }
-  a { color: #0b57d0; }
-  .kofi-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #ff5e5b; color: #fff; text-decoration: none;
-    padding: 10px 20px; border-radius: 8px; font-weight: 600;
-    margin-top: 8px; transition: opacity 0.15s;
-  }
-  .kofi-btn:hover { opacity: 0.85; color: #fff; }
-  .kofi-btn img { width: 22px; height: 22px; }
-</style>
+<meta name="description" content="Mana — MTG Archive: app de Android para organizar tu colección y tus mazos de Magic: The Gathering. Catálogo completo, escaneo con cámara, mazos y valor de colección.">
+<title>Mana — MTG Archive</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Mana - MTG Archive</h1>
-<p>App para organizar tu colección y tus mazos de Magic: The Gathering.</p>
-<ul>
-  <li><a href="privacy-policy.html">Política de privacidad</a></li>
-</ul>
 
-<hr style="margin: 32px 0; border: none; border-top: 1px solid #e0e0e0;">
-<h2>Apóyame</h2>
-<p>Si la app te resulta útil, puedes invitarme a un café en Ko-fi. ¡Gracias!</p>
-<a href="https://ko-fi.com/apgm82" target="_blank" rel="noopener" class="kofi-btn">
-  <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="">
-  Invítame a un café
-</a>
+<!-- Barra superior -->
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html"><span class="dot"></span> Mana — MTG Archive</a>
+    <nav class="nav">
+      <a href="#caracteristicas">Características</a>
+      <a href="#apoyo">Apóyame</a>
+      <a href="privacy-policy.html">Privacidad</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">App de Android · Magic: The Gathering</span>
+      <h1>Mana <span class="sep">—</span> MTG Archive</h1>
+      <p class="tagline">Tu colección y tus mazos de Magic, organizados y siempre a mano. Funciona sin conexión una vez descargado el catálogo.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#caracteristicas">Ver qué hace</a>
+        <a class="btn btn-ghost" href="#apoyo">Apoyar el proyecto</a>
+      </div>
+      <div class="mana-row" aria-hidden="true">
+        <span class="pip w"></span>
+        <span class="pip u"></span>
+        <span class="pip b"></span>
+        <span class="pip r"></span>
+        <span class="pip g"></span>
+      </div>
+    </div>
+
+    <div class="cards-art" aria-hidden="true">
+      <div class="m-card left c-g">
+        <div class="title"></div><div class="art"></div><div class="line"></div><div class="line short"></div>
+      </div>
+      <div class="m-card right c-r">
+        <div class="title"></div><div class="art"></div><div class="line"></div><div class="line short"></div>
+      </div>
+      <div class="m-card front c-u">
+        <div class="title"></div><div class="art"></div><div class="line"></div><div class="line short"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Destacados -->
+<div class="highlights">
+  <div class="container">
+    <span><b>Catálogo completo</b> de cartas</span>
+    <span class="sepdot">•</span>
+    <span><b>7 idiomas</b></span>
+    <span class="sepdot">•</span>
+    <span><b>Sin conexión</b></span>
+    <span class="sepdot">•</span>
+    <span><b>Escaneo</b> con cámara</span>
+  </div>
+</div>
+
+<!-- Características -->
+<section class="section" id="caracteristicas">
+  <div class="container">
+    <h2>Qué puedes hacer</h2>
+    <p class="lead">Todo lo necesario para llevar tu colección de Magic desde el móvil, con el catálogo completo a tu disposición.</p>
+
+    <div class="grid">
+      <article class="feature" style="--c: var(--mana-w)">
+        <h3>Tu colección</h3>
+        <p>Registra cada carta por edición, idioma, estado y acabado foil. Suma cantidades sin duplicar entradas.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--mana-u)">
+        <h3>Explorar por edición</h3>
+        <p>Recorre el catálogo completo edición por edición y añade cartas a tu colección con un solo toque.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--mana-b)">
+        <h3>Mazos</h3>
+        <p>Crea y edita tus mazos, e impórtalos o expórtalos en formato Arena para llevarlos a cualquier sitio.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--mana-r)">
+        <h3>Escaneo con cámara</h3>
+        <p>Reconoce las cartas con la cámara, en tu propio dispositivo, para añadirlas mucho más rápido.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--mana-g)">
+        <h3>Valor estimado</h3>
+        <p>Consulta una estimación del valor de tu colección con precios de referencia de Cardmarket.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--mana-c)">
+        <h3>Varios idiomas</h3>
+        <p>Interfaz y nombres de carta en español, inglés, francés, alemán, italiano, portugués y ruso.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Apoyo -->
+<section class="support" id="apoyo">
+  <div class="container">
+    <h2>Apoya el proyecto</h2>
+    <p>Mana — MTG Archive lo desarrolla una sola persona. Si la app te resulta útil, puedes invitarme a un café. ¡Gracias!</p>
+    <a href="https://ko-fi.com/apgm82" target="_blank" rel="noopener" class="btn btn-primary">
+      <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="">
+      Invítame a un café
+    </a>
+  </div>
+</section>
+
+<!-- Pie -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <a href="privacy-policy.html">Política de privacidad</a>
+      <a href="mailto:apgmdev@gmail.com">apgmdev@gmail.com</a>
+    </div>
+    <p class="legal">
+      Datos e información de cartas de MTGJSON; imágenes de Scryfall; precios de referencia de Cardmarket.
+      Magic: The Gathering es una marca de Wizards of the Coast. Esta app no está afiliada ni respaldada
+      por Wizards of the Coast, Scryfall ni Cardmarket.
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>

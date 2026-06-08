@@ -1,0 +1,285 @@
+/* ============================================================
+   Mana — MTG Archive · estilos del sitio
+   Paleta basada en los cinco colores de maná (WUBRG) + incoloro.
+   ============================================================ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Superficies / texto (claro) */
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --surface-2: #eef1f6;
+  --border: #e3e6ec;
+  --text: #15161a;
+  --muted: #5b616d;
+
+  /* Marca */
+  --accent: #5b4bd6;
+  --accent-strong: #4536c0;
+  --on-accent: #ffffff;
+
+  /* Colores de maná (acentos temáticos) */
+  --mana-w: #d8a93b;
+  --mana-u: #2a78c2;
+  --mana-b: #6b5b86;
+  --mana-r: #cf4534;
+  --mana-g: #2f9156;
+  --mana-c: #8a909c;
+
+  /* Hero (siempre oscuro, en ambos temas) */
+  --hero-bg: #0d0c15;
+  --hero-bg-2: #161427;
+  --hero-text: #f1f0f6;
+  --hero-muted: #b4b1c6;
+  --hero-border: #2a2740;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --maxw: 1080px;
+  --readw: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1014;
+    --surface: #16171d;
+    --surface-2: #1d1f27;
+    --border: #282b34;
+    --text: #e7e8ec;
+    --muted: #9aa0ab;
+    --accent: #8f86ff;
+    --accent-strong: #a79fff;
+    --on-accent: #0c0b14;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
+p { margin: 0 0 1rem; }
+strong { font-weight: 600; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+.section { padding: 72px 0; }
+.section h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  margin: 0 0 .5rem;
+}
+.section .lead { color: var(--muted); max-width: 56ch; margin: 0 0 36px; font-size: 1.08rem; }
+
+/* ---------- Barra superior ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.brand .dot {
+  width: 13px; height: 13px; border-radius: 50%;
+  background: conic-gradient(var(--mana-w), var(--mana-u), var(--mana-b), var(--mana-r), var(--mana-g), var(--mana-w));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.nav { display: flex; gap: 22px; align-items: center; }
+.nav a { color: var(--muted); font-size: .95rem; }
+.nav a:hover { color: var(--text); text-decoration: none; }
+@media (max-width: 620px) { .nav { display: none; } }
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 22px; border-radius: 12px;
+  font-weight: 600; border: 1px solid transparent;
+  transition: background .15s ease, border-color .15s ease, transform .05s ease;
+}
+.btn:hover { text-decoration: none; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-strong); }
+.btn-ghost { background: transparent; color: inherit; border-color: currentColor; opacity: .9; }
+.btn-ghost:hover { opacity: 1; }
+.btn img { width: 20px; height: 20px; display: block; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--hero-text);
+  background:
+    radial-gradient(1100px 520px at 78% -10%, color-mix(in srgb, var(--accent) 42%, transparent), transparent 60%),
+    linear-gradient(160deg, var(--hero-bg-2), var(--hero-bg));
+  border-bottom: 1px solid var(--hero-border);
+}
+/* rejilla sutil tipo archivador / cuadrícula de cartas */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, #fff 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, #fff 6%, transparent) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(120% 100% at 30% 0%, #000 35%, transparent 80%);
+  pointer-events: none;
+}
+.hero .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: center;
+  padding-top: 84px;
+  padding-bottom: 88px;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--hero-muted);
+  border: 1px solid var(--hero-border);
+  background: color-mix(in srgb, #fff 4%, transparent);
+  padding: 6px 12px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(2.3rem, 6vw, 3.6rem);
+  margin: 0 0 16px;
+}
+.hero h1 .sep { color: var(--accent); -webkit-text-fill-color: var(--accent); }
+.hero .tagline { font-size: 1.2rem; color: var(--hero-muted); max-width: 42ch; margin: 0 0 28px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* fila de pips de maná */
+.mana-row { display: flex; gap: 10px; margin-top: 30px; }
+.mana-row .pip {
+  width: 18px; height: 18px; border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.18), 0 1px 4px rgba(0,0,0,.35);
+}
+.pip.w { background: var(--mana-w); }
+.pip.u { background: var(--mana-u); }
+.pip.b { background: var(--mana-b); }
+.pip.r { background: var(--mana-r); }
+.pip.g { background: var(--mana-g); }
+
+/* composición de cartas (CSS, sin imágenes) */
+.cards-art {
+  position: relative;
+  height: 340px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 380px;
+}
+.m-card {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 168px; aspect-ratio: 5 / 7;
+  border-radius: 14px;
+  background: linear-gradient(165deg, #20203033, #0c0c16);
+  border: 1px solid var(--hero-border);
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  padding: 12px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.m-card .title { height: 14px; border-radius: 4px; background: color-mix(in srgb, #fff 12%, transparent); }
+.m-card .art { flex: 1; border-radius: 8px; border: 1px solid color-mix(in srgb, #fff 10%, transparent); }
+.m-card .line { height: 8px; border-radius: 3px; background: color-mix(in srgb, #fff 9%, transparent); }
+.m-card .line.short { width: 60%; }
+.m-card.left  { transform: translate(-50%, -50%) rotate(-13deg) translateX(-78px); }
+.m-card.right { transform: translate(-50%, -50%) rotate(13deg)  translateX(78px); }
+.m-card.front { transform: translate(-50%, -50%) rotate(0); z-index: 2; }
+.m-card.c-u { border-color: color-mix(in srgb, var(--mana-u) 70%, #000); }
+.m-card.c-u .art { background: radial-gradient(120% 120% at 30% 20%, color-mix(in srgb, var(--mana-u) 55%, transparent), transparent 70%); }
+.m-card.c-r { border-color: color-mix(in srgb, var(--mana-r) 70%, #000); }
+.m-card.c-r .art { background: radial-gradient(120% 120% at 30% 20%, color-mix(in srgb, var(--mana-r) 50%, transparent), transparent 70%); }
+.m-card.c-g { border-color: color-mix(in srgb, var(--mana-g) 70%, #000); }
+.m-card.c-g .art { background: radial-gradient(120% 120% at 30% 20%, color-mix(in srgb, var(--mana-g) 50%, transparent), transparent 70%); }
+
+@media (max-width: 820px) {
+  .hero .container { grid-template-columns: 1fr; padding-top: 60px; padding-bottom: 60px; }
+  .cards-art { display: none; }
+}
+
+/* ---------- Tira de destacados ---------- */
+.highlights { border-bottom: 1px solid var(--border); background: var(--surface); }
+.highlights .container {
+  display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: center;
+  padding: 18px 22px; color: var(--muted); font-size: .95rem;
+}
+.highlights b { color: var(--text); font-weight: 600; }
+.highlights .sepdot { color: var(--border); }
+
+/* ---------- Características ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 880px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+.feature {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 24px;
+  overflow: hidden;
+}
+.feature::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--c, var(--accent));
+}
+.feature h3 { font-size: 1.12rem; margin: 6px 0 8px; }
+.feature p { color: var(--muted); margin: 0; font-size: .98rem; }
+
+/* ---------- Banda de apoyo ---------- */
+.support { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.support .container { text-align: center; padding: 56px 22px; }
+.support h2 { margin: 0 0 .4rem; }
+.support p { color: var(--muted); max-width: 52ch; margin: 0 auto 22px; }
+
+/* ---------- Pie ---------- */
+.site-footer { color: var(--muted); font-size: .9rem; }
+.site-footer .container { padding: 34px 22px 56px; }
+.site-footer a { color: var(--muted); text-decoration: underline; }
+.site-footer .row { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 12px; }
+.site-footer .legal { max-width: 70ch; }
+
+/* ============================================================
+   Página de política de privacidad (texto largo)
+   ============================================================ */
+.doc { max-width: var(--readw); margin: 0 auto; padding: 40px 22px 80px; }
+.doc .back { display: inline-block; margin-bottom: 22px; font-size: .95rem; }
+.doc h1 { font-size: clamp(1.7rem, 4vw, 2.1rem); margin: 0 0 .3rem; }
+.doc .updated { color: var(--muted); font-size: .95rem; margin-top: 0; }
+.doc h2 { font-size: 1.25rem; margin: 2.2rem 0 .5rem; }
+.doc h3 { font-size: 1.05rem; margin: 1.5rem 0 .35rem; }
+.doc ul { padding-left: 1.25rem; }
+.doc ul li { margin: .3rem 0; }
+.doc code { background: var(--surface-2); padding: .12em .4em; border-radius: 5px; font-size: .9em; }
+.doc footer { margin-top: 3rem; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }

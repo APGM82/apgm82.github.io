@@ -21,6 +21,42 @@ META_URL = "https://mtgjson.com/api/v5/Meta.json"
 WUBRG = ["W", "U", "B", "R", "G"]
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Tipos de MTGJSON que SÍ son mazos jugables -> categoría de la app. Los tipos NO listados aquí
+# (Secret Lair Drop, MTGO Redemption, Box Set, promos, boosters, toolkits, Shandalar, Sample/Demo,
+# land packs...) se EXCLUYEN del índice: no son mazos preconstruidos jugables.
+CATEGORY = {
+    "Commander Deck": "commander",
+    "MTGO Commander Deck": "commander",
+    "Brawl Deck": "brawl",
+    "Historic Brawl Precon Deck": "brawl",
+    "Planeswalker Deck": "planeswalker",
+    "Theme Deck": "theme",
+    "MTGO Theme Deck": "theme",
+    "Intro Pack": "theme",
+    "Challenger Deck": "challenger",
+    "Pioneer Challenger Deck": "challenger",
+    "Event Deck": "challenger",
+    "Modern Event Deck": "challenger",
+    "Starter Deck": "starter",
+    "Arena Starter Deck": "starter",
+    "Welcome Deck": "starter",
+    "Starter Kit": "starter",
+    "Arena Starter Kit": "starter",
+    "Spellslinger Starter Kit": "starter",
+    "Duel Deck": "duel",
+    "MTGO Duel Deck": "duel",
+    "Duel Of The Planeswalkers Deck": "duel",
+    "Jumpstart": "jumpstart",
+    "Planechase Deck": "other",
+    "Archenemy Deck": "other",
+    "Guild Kit": "other",
+    "Game Night Deck": "other",
+    "World Championship Deck": "other",
+    "Pro Tour Deck": "other",
+    "Clash Pack": "other",
+    "Premium Deck": "other",
+}
+
 
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "mana-precon-index/1.0"})
@@ -75,12 +111,16 @@ def main() -> int:
                 continue
             if not data.get("name"):
                 continue
+            cat = CATEGORY.get(data.get("type", ""))
+            if cat is None:
+                continue  # no es un mazo jugable: fuera del índice
             commander = data.get("commander") or []
             mainboard = data.get("mainBoard") or []
             decks.append({
                 "f": os.path.basename(name)[:-5],  # quita ".json"
                 "n": data.get("name", ""),
                 "t": data.get("type", ""),
+                "cat": cat,
                 "s": (data.get("code") or "").upper(),
                 "d": data.get("releaseDate"),
                 "c": color_identity(commander + mainboard),

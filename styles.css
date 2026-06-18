@@ -283,3 +283,34 @@ strong { font-weight: 600; }
 .doc ul li { margin: .3rem 0; }
 .doc code { background: var(--surface-2); padding: .12em .4em; border-radius: 5px; font-size: .9em; }
 .doc footer { margin-top: 3rem; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
+
+/* ============================================================
+   Selector de idioma y nota de traducción
+   ============================================================ */
+.langsel {
+  font: inherit;
+  font-size: .9rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.langsel:hover { border-color: var(--accent); }
+
+/* En móvil se ocultan los enlaces de la barra, pero el selector debe seguir accesible */
+@media (max-width: 620px) {
+  .nav { display: flex; gap: 0; }
+  .nav a { display: none; }
+}
+
+.trans-note {
+  padding: 8px 12px;
+  margin: 0 0 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: .9rem;
+}

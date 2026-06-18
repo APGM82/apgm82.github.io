@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index, follow">
-<title>Política de privacidad — Mana — MTG Archive</title>
+<title data-i18n="meta.title.privacy">Política de privacidad — Mana — MTG Archive</title>
 <link rel="stylesheet" href="styles.css">
+<script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -13,44 +14,46 @@
   <div class="container">
     <a class="brand" href="index.html"><span class="dot"></span> Mana — MTG Archive</a>
     <nav class="nav">
-      <a href="index.html#caracteristicas">Características</a>
-      <a href="index.html#apoyo">Apóyame</a>
-      <a href="privacy-policy.html">Privacidad</a>
-      <a href="terms.html">Términos</a>
+      <a href="index.html#caracteristicas" data-i18n="nav.features">Características</a>
+      <a href="index.html#apoyo" data-i18n="nav.support">Apóyame</a>
+      <a href="privacy-policy.html" data-i18n="nav.privacy">Privacidad</a>
+      <a href="terms.html" data-i18n="nav.terms">Términos</a>
+      <select id="langsel" class="langsel" aria-label="Idioma / Language"></select>
     </nav>
   </div>
 </header>
 
 <main class="doc">
 
-<a class="back" href="index.html">← Volver al inicio</a>
+<a class="back" href="index.html" data-i18n="back">← Volver al inicio</a>
 
-<h1>Política de privacidad de Mana - MTG Archive</h1>
-<p class="updated">Última actualización: 18 de junio de 2026</p>
+<h1 data-i18n="p.h1">Política de privacidad de Mana - MTG Archive</h1>
+<p class="updated" data-i18n="p.updated">Última actualización: 18 de junio de 2026</p>
+<p class="trans-note" data-i18n="note" style="display:none"></p>
 
-<p>
+<p data-i18n="p.intro">
   Esta política explica qué datos trata la aplicación <strong>Mana - MTG Archive</strong>
   (en adelante, «la app»), con qué finalidad y con quién se comparten. La app es una
   herramienta para organizar tu colección y tus mazos de cartas de Magic: The Gathering.
 </p>
 
-<h2>Responsable</h2>
-<p>
+<h2 data-i18n="p.resp.h2">Responsable</h2>
+<p data-i18n="p.resp.p">
   Antonio Pérez García-Moreno (desarrollador de la app).<br>
   Contacto: <a href="mailto:apgmdev@gmail.com">apgmdev@gmail.com</a>
 </p>
 
-<h2>Datos que tratamos y para qué</h2>
+<h2 data-i18n="p.data.h2">Datos que tratamos y para qué</h2>
 
-<h3>1. Datos que guardas en la app (almacenamiento local)</h3>
-<p>
+<h3 data-i18n="p.s1.h3">1. Datos que guardas en la app (almacenamiento local)</h3>
+<p data-i18n="p.s1.p">
   Tu colección, tus mazos, los ajustes y el idioma se guardan <strong>únicamente en tu
   dispositivo</strong>. El desarrollador no recibe ni almacena esos datos en ningún servidor.
   Se conservan hasta que los borras dentro de la app o desinstalas la aplicación.
 </p>
 
-<h3>2. Publicidad (Google AdMob)</h3>
-<p>
+<h3 data-i18n="p.s2.h3">2. Publicidad (Google AdMob)</h3>
+<p data-i18n="p.s2.p">
   La app muestra anuncios mediante <strong>Google AdMob</strong>. Para ello, Google puede
   tratar el identificador de publicidad del dispositivo, la dirección IP, identificadores de
   dispositivo e información de uso e interacción con los anuncios, con el fin de mostrar
@@ -62,16 +65,16 @@
   privacidad de Google</a>.
 </p>
 
-<h3>3. Consentimiento de privacidad (UE / GDPR)</h3>
-<p>
+<h3 data-i18n="p.s3.h3">3. Consentimiento de privacidad (UE / GDPR)</h3>
+<p data-i18n="p.s3.p">
   En el Espacio Económico Europeo, Reino Unido y Suiza, la app solicita tu consentimiento antes
   de mostrar anuncios personalizados mediante la plataforma de mensajes de usuario de Google (UMP).
   Puedes <strong>cambiar o retirar tu consentimiento</strong> en cualquier momento desde los
   ajustes de privacidad disponibles en la app.
 </p>
 
-<h3>4. Datos de cartas, precios y mazos (servicios externos)</h3>
-<p>
+<h3 data-i18n="p.s4.h3">4. Datos de cartas, precios y mazos (servicios externos)</h3>
+<p data-i18n="p.s4.p">
   Para mostrar el catálogo, las imágenes, los precios de referencia y los mazos precon, la app
   descarga información de varios servicios externos. En todas esas consultas el servicio
   correspondiente recibe únicamente la <strong>dirección IP</strong> y los datos técnicos propios de
@@ -80,29 +83,29 @@
   dispositivo para poder usar la app sin conexión.
 </p>
 <ul>
-  <li>
+  <li data-i18n="p.s4.li1">
     <strong>MTGJSON</strong> — datos del catálogo de cartas y de los mazos precon.
     <a href="https://mtgjson.com/" target="_blank" rel="noopener">mtgjson.com</a>
   </li>
-  <li>
+  <li data-i18n="p.s4.li2">
     <strong>Scryfall</strong> — imágenes de las cartas e información adicional de las impresiones.
     <a href="https://scryfall.com/privacy" target="_blank" rel="noopener">Política de privacidad de Scryfall</a>
   </li>
-  <li>
+  <li data-i18n="p.s4.li3">
     <strong>Cardmarket</strong> — descarga del «Price Guide» público para mostrar el valor estimado
     de tu colección (precios de referencia, no precios de venta). Se descarga el listado público
     completo; no se consulta carta por carta.
     <a href="https://www.cardmarket.com/" target="_blank" rel="noopener">cardmarket.com</a>
   </li>
-  <li>
+  <li data-i18n="p.s4.li4">
     <strong>GitHub Pages</strong> (apgm82.github.io, sitio del propio desarrollador, alojado por
     GitHub) — índice y versión de la lista de mazos precon, y alojamiento de esta misma política.
     <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Política de privacidad de GitHub</a>
   </li>
 </ul>
 
-<h3>5. Cámara y reconocimiento de cartas</h3>
-<p>
+<h3 data-i18n="p.s5.h3">5. Cámara y reconocimiento de cartas</h3>
+<p data-i18n="p.s5.p">
   Si usas la función de escanear cartas, la app accede a la <strong>cámara</strong> e identifica la
   carta a partir de su <strong>imagen</strong>: compara lo que capta la cámara con un índice de
   cartas mediante un modelo de inteligencia artificial que se ejecuta <strong>enteramente en tu
@@ -111,30 +114,30 @@
   procesan en memoria mientras estás en la pantalla de escaneo.
 </p>
 
-<h3>6. Enlaces a sitios externos</h3>
-<p>
+<h3 data-i18n="p.s6.h3">6. Enlaces a sitios externos</h3>
+<p data-i18n="p.s6.p">
   La app puede ofrecer enlaces a sitios externos: por ejemplo, abrir una carta en
   <strong>Cardmarket</strong>, o importar y exportar mazos con <strong>Archidekt</strong> y
   <strong>Moxfield</strong>. Si los abres, se cargan en tu navegador y se rigen por las políticas de
   privacidad de esos sitios. La app no les envía datos de tu colección.
 </p>
 
-<h2>Permisos</h2>
+<h2 data-i18n="p.perm.h2">Permisos</h2>
 <ul>
-  <li><strong>Cámara:</strong> para escanear cartas (opcional; solo si usas esa función).</li>
-  <li><strong>Internet / estado de red:</strong> para descargar datos e imágenes de cartas y mostrar anuncios.</li>
-  <li><strong>Identificador de publicidad:</strong> usado por AdMob para la publicidad.</li>
+  <li data-i18n="p.perm.li1"><strong>Cámara:</strong> para escanear cartas (opcional; solo si usas esa función).</li>
+  <li data-i18n="p.perm.li2"><strong>Internet / estado de red:</strong> para descargar datos e imágenes de cartas y mostrar anuncios.</li>
+  <li data-i18n="p.perm.li3"><strong>Identificador de publicidad:</strong> usado por AdMob para la publicidad.</li>
 </ul>
 
-<h2>Conservación de los datos</h2>
-<p>
+<h2 data-i18n="p.ret.h2">Conservación de los datos</h2>
+<p data-i18n="p.ret.p">
   Los datos que guardas en la app permanecen en tu dispositivo hasta que los elimines o
   desinstales la aplicación. Los datos tratados por Google con fines publicitarios se conservan
   según las políticas de Google.
 </p>
 
-<h2>Tus derechos</h2>
-<p>
+<h2 data-i18n="p.rights.h2">Tus derechos</h2>
+<p data-i18n="p.rights.p">
   Puedes acceder, modificar o borrar los datos de tu colección y mazos directamente desde la app
   (o desinstalándola). Respecto a la publicidad, puedes gestionar o retirar tu consentimiento
   desde los ajustes de la app y administrar la personalización de anuncios desde la configuración
@@ -142,34 +145,34 @@
   dirección de contacto indicada arriba.
 </p>
 
-<h2>Menores</h2>
-<p>
+<h2 data-i18n="p.minors.h2">Menores</h2>
+<p data-i18n="p.minors.p">
   La app no está dirigida a menores de la edad mínima exigida por la legislación aplicable en tu
   país (por lo general, 13 años) y no recopila a sabiendas datos de menores.
 </p>
 
-<h2>Terceros</h2>
+<h2 data-i18n="p.third.h2">Terceros</h2>
 <ul>
-  <li>Google AdMob (publicidad) y la plataforma de mensajes de usuario de Google (consentimiento).</li>
-  <li>MTGJSON (datos de cartas y mazos precon).</li>
-  <li>Scryfall (imágenes e información de cartas).</li>
-  <li>Cardmarket (precios de referencia).</li>
-  <li>GitHub Pages (alojamiento del índice de precons y de esta política).</li>
+  <li data-i18n="p.third.li1">Google AdMob (publicidad) y la plataforma de mensajes de usuario de Google (consentimiento).</li>
+  <li data-i18n="p.third.li2">MTGJSON (datos de cartas y mazos precon).</li>
+  <li data-i18n="p.third.li3">Scryfall (imágenes e información de cartas).</li>
+  <li data-i18n="p.third.li4">Cardmarket (precios de referencia).</li>
+  <li data-i18n="p.third.li5">GitHub Pages (alojamiento del índice de precons y de esta política).</li>
 </ul>
 
-<h2>Cambios en esta política</h2>
-<p>
+<h2 data-i18n="p.changes.h2">Cambios en esta política</h2>
+<p data-i18n="p.changes.p">
   Esta política puede actualizarse. Publicaremos cualquier cambio en esta misma página, con la
   fecha de «Última actualización» revisada.
 </p>
 
-<h2>Contacto</h2>
-<p>
+<h2 data-i18n="p.contact.h2">Contacto</h2>
+<p data-i18n="p.contact.p">
   Para cualquier pregunta sobre esta política o sobre el tratamiento de tus datos:
   <a href="mailto:apgmdev@gmail.com">apgmdev@gmail.com</a>
 </p>
 
-<footer>
+<footer data-i18n="p.footer">
   Magic: The Gathering es una marca de Wizards of the Coast. Esta app no está afiliada ni
   respaldada por Wizards of the Coast, Scryfall, Cardmarket ni MTGJSON.
 </footer>

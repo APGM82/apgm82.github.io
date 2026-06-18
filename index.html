@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Mana — MTG Archive: app de Android para organizar tu colección y tus mazos de Magic: The Gathering. Catálogo completo, escaneo con cámara, mazos y valor de colección.">
+<meta name="description" data-i18n="meta.desc.index" data-i18n-attr="content" content="Mana — MTG Archive: app de Android para organizar tu colección y tus mazos de Magic: The Gathering. Catálogo completo, escaneo con cámara, mazos y valor de colección.">
 <title>Mana — MTG Archive</title>
 <link rel="stylesheet" href="styles.css">
+<script src="i18n.js" defer></script>
 </head>
 <body>
 
@@ -14,10 +15,11 @@
   <div class="container">
     <a class="brand" href="index.html"><span class="dot"></span> Mana — MTG Archive</a>
     <nav class="nav">
-      <a href="#caracteristicas">Características</a>
-      <a href="#apoyo">Apóyame</a>
-      <a href="privacy-policy.html">Privacidad</a>
-      <a href="terms.html">Términos</a>
+      <a href="#caracteristicas" data-i18n="nav.features">Características</a>
+      <a href="#apoyo" data-i18n="nav.support">Apóyame</a>
+      <a href="privacy-policy.html" data-i18n="nav.privacy">Privacidad</a>
+      <a href="terms.html" data-i18n="nav.terms">Términos</a>
+      <select id="langsel" class="langsel" aria-label="Idioma / Language"></select>
     </nav>
   </div>
 </header>
@@ -26,12 +28,12 @@
 <section class="hero">
   <div class="container">
     <div class="hero-copy">
-      <span class="eyebrow">App de Android · Magic: The Gathering</span>
+      <span class="eyebrow" data-i18n="i.eyebrow">App de Android · Magic: The Gathering</span>
       <h1>Mana <span class="sep">—</span> MTG Archive</h1>
-      <p class="tagline">Tu colección y tus mazos de Magic, organizados y siempre a mano. Funciona sin conexión una vez descargado el catálogo.</p>
+      <p class="tagline" data-i18n="i.tagline">Tu colección y tus mazos de Magic, organizados y siempre a mano. Funciona sin conexión una vez descargado el catálogo.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#caracteristicas">Ver qué hace</a>
-        <a class="btn btn-ghost" href="#apoyo">Apoyar el proyecto</a>
+        <a class="btn btn-primary" href="#caracteristicas" data-i18n="i.cta1">Ver qué hace</a>
+        <a class="btn btn-ghost" href="#apoyo" data-i18n="i.cta2">Apoyar el proyecto</a>
       </div>
       <div class="mana-row" aria-hidden="true">
         <span class="pip w"></span>
@@ -59,51 +61,51 @@
 <!-- Destacados -->
 <div class="highlights">
   <div class="container">
-    <span><b>Catálogo completo</b> de cartas</span>
+    <span data-i18n="i.hl1"><b>Catálogo completo</b> de cartas</span>
     <span class="sepdot">•</span>
-    <span><b>7 idiomas</b></span>
+    <span data-i18n="i.hl2"><b>7 idiomas</b></span>
     <span class="sepdot">•</span>
-    <span><b>Sin conexión</b></span>
+    <span data-i18n="i.hl3"><b>Sin conexión</b></span>
     <span class="sepdot">•</span>
-    <span><b>Escaneo</b> con cámara</span>
+    <span data-i18n="i.hl4"><b>Escaneo</b> con cámara</span>
   </div>
 </div>
 
 <!-- Características -->
 <section class="section" id="caracteristicas">
   <div class="container">
-    <h2>Qué puedes hacer</h2>
-    <p class="lead">Todo lo necesario para llevar tu colección de Magic desde el móvil, con el catálogo completo a tu disposición.</p>
+    <h2 data-i18n="i.feat.h2">Qué puedes hacer</h2>
+    <p class="lead" data-i18n="i.feat.lead">Todo lo necesario para llevar tu colección de Magic desde el móvil, con el catálogo completo a tu disposición.</p>
 
     <div class="grid">
       <article class="feature" style="--c: var(--mana-w)">
-        <h3>Tu colección</h3>
-        <p>Registra cada carta por edición, idioma, estado y acabado foil. Suma cantidades sin duplicar entradas.</p>
+        <h3 data-i18n="i.f1.t">Tu colección</h3>
+        <p data-i18n="i.f1.d">Registra cada carta por edición, idioma, estado y acabado foil. Suma cantidades sin duplicar entradas.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-u)">
-        <h3>Explorar por edición</h3>
-        <p>Recorre el catálogo completo edición por edición y añade cartas a tu colección con un solo toque.</p>
+        <h3 data-i18n="i.f2.t">Explorar por edición</h3>
+        <p data-i18n="i.f2.d">Recorre el catálogo completo edición por edición y añade cartas a tu colección con un solo toque.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-b)">
-        <h3>Mazos</h3>
-        <p>Crea y edita tus mazos, e impórtalos o expórtalos en formato Arena para llevarlos a cualquier sitio.</p>
+        <h3 data-i18n="i.f3.t">Mazos</h3>
+        <p data-i18n="i.f3.d">Crea y edita tus mazos, e impórtalos o expórtalos en formato Arena para llevarlos a cualquier sitio.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-r)">
-        <h3>Escaneo con cámara</h3>
-        <p>Reconoce las cartas con la cámara, en tu propio dispositivo, para añadirlas mucho más rápido.</p>
+        <h3 data-i18n="i.f4.t">Escaneo con cámara</h3>
+        <p data-i18n="i.f4.d">Reconoce las cartas con la cámara, en tu propio dispositivo, para añadirlas mucho más rápido.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-g)">
-        <h3>Valor estimado</h3>
-        <p>Consulta una estimación del valor de tu colección con precios de referencia de Cardmarket.</p>
+        <h3 data-i18n="i.f5.t">Valor estimado</h3>
+        <p data-i18n="i.f5.d">Consulta una estimación del valor de tu colección con precios de referencia de Cardmarket.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-c)">
-        <h3>Varios idiomas</h3>
-        <p>Interfaz y nombres de carta en español, inglés, francés, alemán, italiano, portugués y ruso.</p>
+        <h3 data-i18n="i.f6.t">Varios idiomas</h3>
+        <p data-i18n="i.f6.d">Interfaz y nombres de carta en español, inglés, francés, alemán, italiano, portugués y ruso.</p>
       </article>
     </div>
   </div>
@@ -112,11 +114,11 @@
 <!-- Apoyo -->
 <section class="support" id="apoyo">
   <div class="container">
-    <h2>Apoya el proyecto</h2>
-    <p>Mana — MTG Archive lo desarrolla una sola persona. Si la app te resulta útil, puedes invitarme a un café. ¡Gracias!</p>
+    <h2 data-i18n="i.sup.h2">Apoya el proyecto</h2>
+    <p data-i18n="i.sup.p">Mana — MTG Archive lo desarrolla una sola persona. Si la app te resulta útil, puedes invitarme a un café. ¡Gracias!</p>
     <a href="https://ko-fi.com/apgm82" target="_blank" rel="noopener" class="btn btn-primary">
       <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="">
-      Invítame a un café
+      <span data-i18n="i.sup.cta">Invítame a un café</span>
     </a>
   </div>
 </section>
@@ -125,11 +127,11 @@
 <footer class="site-footer">
   <div class="container">
     <div class="row">
-      <a href="privacy-policy.html">Política de privacidad</a>
-      <a href="terms.html">Términos de servicio</a>
+      <a href="privacy-policy.html" data-i18n="foot.privacy">Política de privacidad</a>
+      <a href="terms.html" data-i18n="foot.terms">Términos de servicio</a>
       <a href="mailto:apgmdev@gmail.com">apgmdev@gmail.com</a>
     </div>
-    <p class="legal">
+    <p class="legal" data-i18n="foot.legal">
       Datos e información de cartas de MTGJSON; imágenes de Scryfall; precios de referencia de Cardmarket.
       Magic: The Gathering es una marca de Wizards of the Coast. Esta app no está afiliada ni respaldada
       por Wizards of the Coast, Scryfall ni Cardmarket.

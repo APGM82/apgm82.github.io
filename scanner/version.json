@@ -1,0 +1,23 @@
+{
+  "version": "2026-06-25",
+  "model": "mana_v3",
+  "dim": 512,
+  "count": 100003,
+  "files": {
+    "vectors_int8.bin": {
+      "sha256": "6c788faa6a93c9b19f8067237ffbcaab0c29ea44e71c26cce49a663eabae52cc",
+      "size": 51201536,
+      "url": "vectors_int8.bin.gz"
+    },
+    "scales.f32.bin": {
+      "sha256": "5a941b6adb71e7c6d3beb59cc2bd336386f7653f45e557526a8807784b800724",
+      "size": 400012,
+      "url": "scales.f32.bin.gz"
+    },
+    "cards.tsv": {
+      "sha256": "1c47c40b40346a5b86ca7ea0c704afca770832d678e4855b4739ec042be8e2b6",
+      "size": 15990703,
+      "url": "cards.tsv.gz"
+    }
+  }
+}

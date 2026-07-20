@@ -254,12 +254,12 @@ strong { font-weight: 600; }
 
 /* ---------- Características ---------- */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 18px;
 }
-@media (max-width: 880px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+.grid .feature { flex: 1 1 280px; max-width: 340px; }
 
 .feature {
   position: relative;

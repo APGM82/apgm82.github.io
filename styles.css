@@ -232,6 +232,26 @@ strong { font-weight: 600; }
 .highlights b { color: var(--text); font-weight: 600; }
 .highlights .sepdot { color: var(--border); }
 
+/* ---------- Descargar ---------- */
+.download { background: var(--surface); border-bottom: 1px solid var(--border); }
+.download .container { text-align: center; padding: 64px 22px; }
+.download h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); margin: 0 0 .4rem; }
+.download .download-sub { color: var(--muted); margin: 0 0 26px; font-size: 1.08rem; }
+.store-badges {
+  display: inline-flex; flex-wrap: wrap; gap: 16px 22px;
+  align-items: center; justify-content: center;
+  padding: 22px 28px;
+  background: #ffffff;
+  border: 1px solid #e6e8ee;
+  border-radius: 20px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.12);
+}
+.store-badge { display: inline-flex; transition: transform .05s ease, opacity .15s ease; }
+.store-badge:hover { opacity: .9; text-decoration: none; }
+.store-badge:active { transform: translateY(1px); }
+.store-badge img { height: 54px; width: auto; display: block; }
+@media (max-width: 420px) { .store-badge img { height: 46px; } }
+
 /* ---------- Características ---------- */
 .grid {
   display: grid;

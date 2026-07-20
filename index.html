@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" data-i18n="meta.desc.index" data-i18n-attr="content" content="Mana — MTG Archive: app de Android para organizar tu colección y tus mazos de Magic: The Gathering. Catálogo completo, escaneo con cámara, mazos y valor de colección.">
+<meta name="description" data-i18n="meta.desc.index" data-i18n-attr="content" content="Mana — MTG Archive: app para Android y Windows para organizar tu colección y tus mazos de Magic: The Gathering. Catálogo completo, escaneo con cámara, mazos y valor de colección.">
 <title>Mana — MTG Archive</title>
 <link rel="stylesheet" href="styles.css">
 <script src="i18n.js" defer></script>
@@ -15,6 +15,7 @@
   <div class="container">
     <a class="brand" href="index.html"><span class="dot"></span> Mana — MTG Archive</a>
     <nav class="nav">
+      <a href="#descargar" data-i18n="nav.download">Descargar</a>
       <a href="#caracteristicas" data-i18n="nav.features">Características</a>
       <a href="#apoyo" data-i18n="nav.support">Apóyame</a>
       <a href="privacy-policy.html" data-i18n="nav.privacy">Privacidad</a>
@@ -28,7 +29,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-copy">
-      <span class="eyebrow" data-i18n="i.eyebrow">App de Android · Magic: The Gathering</span>
+      <span class="eyebrow" data-i18n="i.eyebrow">App para Android y Windows · Magic: The Gathering</span>
       <h1>Mana <span class="sep">—</span> MTG Archive</h1>
       <p class="tagline" data-i18n="i.tagline">Tu colección y tus mazos de Magic, organizados y siempre a mano. Funciona sin conexión una vez descargado el catálogo.</p>
       <div class="hero-actions">
@@ -71,11 +72,27 @@
   </div>
 </div>
 
+<!-- Descargar -->
+<section class="download" id="descargar">
+  <div class="container">
+    <h2 data-i18n="i.dl.h2">Descárgala gratis</h2>
+    <p class="download-sub" data-i18n="i.dl.sub">En Google Play y Microsoft Store</p>
+    <div class="store-badges">
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.apgm.mana_mtgarchive" target="_blank" rel="noopener" aria-label="Disponible en Google Play">
+        <img data-i18n="i.dl.play" data-i18n-attr="src" src="https://play.google.com/intl/es_es/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" loading="lazy">
+      </a>
+      <a class="store-badge" href="https://apps.microsoft.com/detail/9N07T9KSQW3Z" target="_blank" rel="noopener" aria-label="Descárgala en Microsoft Store">
+        <img data-i18n="i.dl.ms" data-i18n-attr="src" src="https://get.microsoft.com/images/es%20dark.svg" alt="Descárgala en Microsoft Store" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- Características -->
 <section class="section" id="caracteristicas">
   <div class="container">
     <h2 data-i18n="i.feat.h2">Qué puedes hacer</h2>
-    <p class="lead" data-i18n="i.feat.lead">Todo lo necesario para llevar tu colección de Magic desde el móvil, con el catálogo completo a tu disposición.</p>
+    <p class="lead" data-i18n="i.feat.lead">Todo lo necesario para llevar tu colección de Magic en el móvil y el PC, con el catálogo completo a tu disposición.</p>
 
     <div class="grid">
       <article class="feature" style="--c: var(--mana-w)">
@@ -91,6 +108,11 @@
       <article class="feature" style="--c: var(--mana-b)">
         <h3 data-i18n="i.f3.t">Mazos</h3>
         <p data-i18n="i.f3.d">Crea y edita tus mazos, e impórtalos o expórtalos en formato Arena para llevarlos a cualquier sitio.</p>
+      </article>
+
+      <article class="feature" style="--c: var(--accent)">
+        <h3 data-i18n="i.f7.t">Contador de vida y utilidades</h3>
+        <p data-i18n="i.f7.d">Contador de vida para tus partidas con contadores por jugador, y utilidades de juego: analizador de maná, reglas sin conexión, simulador de manos e historial.</p>
       </article>
 
       <article class="feature" style="--c: var(--mana-r)">

@@ -95,11 +95,13 @@
     <h2 data-i18n="i.vid.h2">Míralo en acción</h2>
     <p class="lead" data-i18n="i.vid.sub">Un recorrido rápido por las funciones principales: escáner, colección, mazos y contador de vida.</p>
     <div class="video-frame video-frame--portrait">
-      <iframe src="https://www.youtube-nocookie.com/embed/OvDLekhZvyk"
-        title="Mana — MTG Archive"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <button type="button" class="video-facade"
+        data-embed="https://www.youtube-nocookie.com/embed/OvDLekhZvyk?autoplay=1"
+        style="background-image:url('video-poster.jpg')"
+        data-i18n="i.vid.play" data-i18n-attr="aria-label"
+        aria-label="Reproducir el vídeo">
+        <span class="video-play" aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </section>
@@ -176,6 +178,20 @@
     </p>
   </div>
 </footer>
+
+<script>
+  // Facade del vídeo: no carga el iframe de YouTube hasta pulsar el póster.
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".video-facade");
+    if (!b) return;
+    var f = document.createElement("iframe");
+    f.src = b.dataset.embed;
+    f.title = "Mana — MTG Archive";
+    f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+</script>
 
 </body>
 </html>

@@ -2,21 +2,21 @@
   "version": "2026-07-23",
   "model": "mana_v3",
   "dim": 512,
-  "count": 100302,
+  "count": 98363,
   "files": {
     "vectors_int8.bin": {
-      "sha256": "800375e49e2e69d1f39853067b74ce9dbbf12af4c9611496b102b0037d8d37ea",
-      "size": 51354624,
+      "sha256": "2da0ac4ff34c7ef55397a3838cf359307a67d909d450ed3f3ad34b5eb5581598",
+      "size": 50361856,
       "url": "vectors_int8.bin.gz"
     },
     "scales.f32.bin": {
-      "sha256": "393a6a52be45ab5fe993e603fc9acc9d6a08b69a2d4caf7d46b8783c16d85c45",
-      "size": 401208,
+      "sha256": "1fa8a588bf8df21fa29ad931b20f0daebfa1ef3f3888d7d3f22deb30117f0fa3",
+      "size": 393452,
       "url": "scales.f32.bin.gz"
     },
     "cards.tsv": {
-      "sha256": "0644673bfa44242bb18bf098fe36aba71eea50daaa2082cbbfeb30b5f7dd6c3f",
-      "size": 16039318,
+      "sha256": "bbc27202db98dcad2c9e32662dfc8f09e2d7b27197174967512e9b8016484dd5",
+      "size": 15731034,
       "url": "cards.tsv.gz"
     }
   }

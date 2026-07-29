@@ -7,22 +7,22 @@
     "vectors_int8.bin": {
       "sha256": "5e14bda9ba7da6c63178bfb95bc4a3613ac0abb5e6f81cbf30217a33fbaf17d8",
       "size": 50409984,
-      "url": "vectors_int8.bin.gz"
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-07-29/vectors_int8.bin.gz"
     },
     "scales.f32.bin": {
       "sha256": "e21e4a455027212ade01bbe499908f27d0504f851ef2fb326f5bec407344af8d",
       "size": 393828,
-      "url": "scales.f32.bin.gz"
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-07-29/scales.f32.bin.gz"
     },
     "cards.tsv": {
       "sha256": "ee7f0a12c3176ef89cb4611c152bc3993f209650a443e566a491774826d78019",
       "size": 15746383,
-      "url": "cards.tsv.gz"
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-07-29/cards.tsv.gz"
     }
   },
   "modelFile": {
     "sha256": "094489287511d227381ede653113c26574a749079726fef7f7aca7150bc671df",
     "size": 36267031,
-    "url": "models/mana_v3.onnx.gz"
+    "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-07-29/mana_v3.onnx.gz"
   }
 }

@@ -19,5 +19,10 @@
       "size": 15746383,
       "url": "cards.tsv.gz"
     }
+  },
+  "modelFile": {
+    "sha256": "094489287511d227381ede653113c26574a749079726fef7f7aca7150bc671df",
+    "size": 36267031,
+    "url": "models/mana_v3.onnx.gz"
   }
 }

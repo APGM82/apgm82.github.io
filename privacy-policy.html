@@ -28,16 +28,17 @@
 <a class="back" href="index.html" data-i18n="back">← Volver al inicio</a>
 
 <h1 data-i18n="p.h1">Política de privacidad de Mana - MTG Archive</h1>
-<p class="updated" data-i18n="p.updated">Última actualización: 18 de junio de 2026</p>
+<p class="updated" data-i18n="p.updated">Última actualización: 30 de julio de 2026</p>
 <p class="trans-note" data-i18n="note" style="display:none"></p>
 
 <p data-i18n="p.intro">
   Esta política explica qué datos trata la aplicación <strong>Mana - MTG Archive</strong>
   (en adelante, «la app»), con qué finalidad y con quién se comparten. La app es una
   herramienta para organizar tu colección y tus mazos de cartas de Magic: The Gathering.
-  La app está disponible para Android y Windows; los apartados sobre publicidad (Google AdMob,
-  consentimiento e identificador de publicidad) se aplican únicamente a la versión de Android:
-  la versión de Windows no muestra anuncios.
+  La app está disponible para Android y Windows. Los apartados sobre publicidad (Google AdMob,
+  consentimiento e identificador de publicidad), sobre la copia de seguridad en Google Drive y
+  sobre las compras se aplican <strong>únicamente a la versión de Android</strong>: la versión de
+  Windows no muestra anuncios, no incluye compras y no se conecta a ninguna cuenta.
 </p>
 
 <h2 data-i18n="p.resp.h2">Responsable</h2>
@@ -50,9 +51,10 @@
 
 <h3 data-i18n="p.s1.h3">1. Datos que guardas en la app (almacenamiento local)</h3>
 <p data-i18n="p.s1.p">
-  Tu colección, tus mazos, los ajustes y el idioma se guardan <strong>únicamente en tu
-  dispositivo</strong>. El desarrollador no recibe ni almacena esos datos en ningún servidor.
-  Se conservan hasta que los borras dentro de la app o desinstalas la aplicación.
+  Tu colección, tus mazos, los ajustes y el idioma se guardan <strong>en tu dispositivo</strong>.
+  El desarrollador no recibe ni almacena esos datos en ningún servidor. Se conservan hasta que los
+  borras dentro de la app o desinstalas la aplicación. La <strong>única excepción</strong> es la
+  copia de seguridad en Google Drive: es opcional, la activas tú y se explica en el apartado 6.
 </p>
 
 <h3 data-i18n="p.s2.h3">2. Publicidad (Google AdMob)</h3>
@@ -87,7 +89,8 @@
 </p>
 <ul>
   <li data-i18n="p.s4.li1">
-    <strong>MTGJSON</strong> — datos del catálogo de cartas y de los mazos precon.
+    <strong>MTGJSON</strong> — datos del catálogo de cartas, de los mazos precon y precios de
+    referencia en dólares (procedentes de TCGplayer).
     <a href="https://mtgjson.com/" target="_blank" rel="noopener">mtgjson.com</a>
   </li>
   <li data-i18n="p.s4.li2">
@@ -101,8 +104,9 @@
     <a href="https://www.cardmarket.com/" target="_blank" rel="noopener">cardmarket.com</a>
   </li>
   <li data-i18n="p.s4.li4">
-    <strong>GitHub Pages</strong> (apgm82.github.io, sitio del propio desarrollador, alojado por
-    GitHub) — índice y versión de la lista de mazos precon, y alojamiento de esta misma política.
+    <strong>GitHub</strong> (apgm82.github.io y GitHub Releases, del propio desarrollador,
+    alojados por GitHub) — índice y versión de la lista de mazos precon, índice y modelo del
+    reconocimiento de cartas, y alojamiento de esta misma política.
     <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Política de privacidad de GitHub</a>
   </li>
 </ul>
@@ -117,8 +121,64 @@
   procesan en memoria mientras estás en la pantalla de escaneo.
 </p>
 
-<h3 data-i18n="p.s6.h3">6. Enlaces a sitios externos</h3>
+<h3 data-i18n="p.s6.h3">6. Copia de seguridad en Google Drive (opcional)</h3>
 <p data-i18n="p.s6.p">
+  Si activas la copia de seguridad en la nube (disponible solo en la versión de Android), la app
+  guarda una copia de tu colección, tus mazos, tus listas de deseados y tu historial en
+  <strong>tu propio Google Drive</strong>. Esta función está desactivada mientras no conectes una
+  cuenta.
+</p>
+<ul>
+  <li data-i18n="p.s6.li1">
+    Se te pide permiso para acceder a Drive con el ámbito <strong>drive.file</strong>, que da acceso
+    <strong>únicamente a los ficheros que crea la propia app</strong>: la app no puede ver ni leer
+    el resto de tu Drive.
+  </li>
+  <li data-i18n="p.s6.li2">
+    La copia se guarda como un único fichero (<strong>mana-backup.json</strong>) en tu cuenta. Es
+    <strong>tuyo</strong>: lo ves en tu Drive y puedes borrarlo cuando quieras.
+  </li>
+  <li data-i18n="p.s6.li3">
+    <strong>El desarrollador no recibe esa copia ni tiene acceso a ella</strong>: va de tu
+    dispositivo a tu cuenta de Google, sin pasar por ningún servidor propio.
+  </li>
+  <li data-i18n="p.s6.li4">
+    La app lee la <strong>dirección de correo</strong> de la cuenta que conectas, solo para
+    mostrarte con cuál estás guardando. No se almacena ni se envía a ningún sitio.
+  </li>
+  <li data-i18n="p.s6.li5">
+    Puedes <strong>desconectar la cuenta</strong> cuando quieras desde los ajustes de la app, y
+    retirar el acceso desde la configuración de seguridad de tu cuenta de Google.
+  </li>
+</ul>
+<p data-i18n="p.s6.limited">
+  La información que la app obtiene de las API de Google se usa <strong>exclusivamente</strong> para
+  prestar esta función de copia de seguridad, conforme a la
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política
+  de Datos de Usuario de los Servicios de API de Google</a>, incluidos sus requisitos de Uso Limitado.
+  No se usa con fines publicitarios, no se vende ni se cede a terceros, y ninguna persona la lee.
+</p>
+
+<h3 data-i18n="p.s7.h3">7. Notificaciones</h3>
+<p data-i18n="p.s7.p">
+  La app puede enviarte un <strong>aviso mensual</strong> con el valor estimado de tu colección. El
+  aviso se genera <strong>en tu propio dispositivo</strong> a partir de datos que ya están en él: no
+  se envía nada a ningún servidor ni interviene ningún servicio externo de notificaciones. En
+  Android 13 y posteriores se te pide permiso para mostrarlo, y puedes desactivarlo en cualquier
+  momento desde los ajustes de la app.
+</p>
+
+<h3 data-i18n="p.s8.h3">8. Compras y valoración (Google Play)</h3>
+<p data-i18n="p.s8.p">
+  La versión de Android ofrece compras opcionales (packs de temas) a través de
+  <strong>Google Play</strong>. El pago y los datos de la transacción los trata Google; la app solo
+  recibe si la compra está activa o no, y el desarrollador <strong>no accede a tus datos de
+  pago</strong>. La app también puede mostrarte la ventana de valoración de Google Play; esa
+  valoración la gestiona Google y el desarrollador no sabe si la has escrito ni qué has puesto.
+</p>
+
+<h3 data-i18n="p.s9.h3">9. Enlaces a sitios externos</h3>
+<p data-i18n="p.s9.p">
   La app puede ofrecer enlaces a sitios externos: por ejemplo, abrir una carta en
   <strong>Cardmarket</strong>, o importar y exportar mazos con <strong>Archidekt</strong> y
   <strong>Moxfield</strong>. Si los abres, se cargan en tu navegador y se rigen por las políticas de
@@ -130,19 +190,25 @@
   <li data-i18n="p.perm.li1"><strong>Cámara:</strong> para escanear cartas (opcional; solo si usas esa función).</li>
   <li data-i18n="p.perm.li2"><strong>Internet / estado de red:</strong> para descargar datos e imágenes de cartas y mostrar anuncios.</li>
   <li data-i18n="p.perm.li3"><strong>Identificador de publicidad:</strong> usado por AdMob para la publicidad.</li>
+  <li data-i18n="p.perm.li4"><strong>Notificaciones:</strong> para el aviso mensual del valor de tu colección (opcional; Android 13 y posteriores).</li>
 </ul>
 
 <h2 data-i18n="p.ret.h2">Conservación de los datos</h2>
 <p data-i18n="p.ret.p">
   Los datos que guardas en la app permanecen en tu dispositivo hasta que los elimines o
-  desinstales la aplicación. Los datos tratados por Google con fines publicitarios se conservan
-  según las políticas de Google.
+  desinstales la aplicación. Si activaste la copia de seguridad en Google Drive, esa copia
+  <strong>permanece en tu cuenta de Drive hasta que la borres tú</strong>: desconectar la cuenta o
+  desinstalar la app no la elimina. Los datos tratados por Google con fines publicitarios se
+  conservan según las políticas de Google.
 </p>
 
 <h2 data-i18n="p.rights.h2">Tus derechos</h2>
 <p data-i18n="p.rights.p">
   Puedes acceder, modificar o borrar los datos de tu colección y mazos directamente desde la app
-  (o desinstalándola). Respecto a la publicidad, puedes gestionar o retirar tu consentimiento
+  (o desinstalándola). Respecto a la copia en la nube, puedes desconectar la cuenta desde los
+  ajustes de la app, borrar el fichero de copia desde tu propio Drive y retirar el acceso de la app
+  desde la configuración de seguridad de tu cuenta de Google. Respecto a la publicidad, puedes
+  gestionar o retirar tu consentimiento
   desde los ajustes de la app y administrar la personalización de anuncios desde la configuración
   de Google de tu dispositivo. Si tienes cualquier consulta sobre tus datos, escribe a la
   dirección de contacto indicada arriba.
@@ -160,7 +226,9 @@
   <li data-i18n="p.third.li2">MTGJSON (datos de cartas y mazos precon).</li>
   <li data-i18n="p.third.li3">Scryfall (imágenes e información de cartas).</li>
   <li data-i18n="p.third.li4">Cardmarket (precios de referencia).</li>
-  <li data-i18n="p.third.li5">GitHub Pages (alojamiento del índice de precons y de esta política).</li>
+  <li data-i18n="p.third.li5">GitHub (alojamiento del índice de precons, del reconocimiento de cartas y de esta política).</li>
+  <li data-i18n="p.third.li6">Google Drive (copia de seguridad opcional, en tu propia cuenta).</li>
+  <li data-i18n="p.third.li7">Google Play (compras opcionales y valoración de la app).</li>
 </ul>
 
 <h2 data-i18n="p.changes.h2">Cambios en esta política</h2>

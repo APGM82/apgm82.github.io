@@ -7,7 +7,18 @@ lo necesario para una lista rica pero ligera: fileName, nombre, tipo, edición, 
 color (de colorIdentity) y el id de una carta de portada. NO guarda las listas de cartas, así que
 el índice resultante es pequeño (~0,5 MB). Las cartas de cada mazo las baja la app bajo demanda.
 
-Salida (junto a este script): index.json y version.json.
+Aparte publica cards.json: qué cartas lleva cada mazo, solo NOMBRE y CANTIDAD, para que la app
+pueda decir "tienes el 68 % de este mazo" en la lista sin pedirle a MTGJSON los 1600 mazos. Va en
+un fichero suyo, y no dentro de index.json, porque la lista se pinta con el índice y este dato solo
+hace falta si el usuario tiene colección. Formato pensado para ocupar poco:
+
+    {"version": "...", "names": ["Sol Ring", ...], "decks": {"<fileName>": [[12,1],[45,4]], ...}}
+
+o sea, un diccionario de nombres y, por mazo, pares [índice del nombre, cantidad]. Las cantidades
+van SUMADAS entre comandante/principal/banquillo, que es como cuenta la app. Las tierras básicas se
+quedan fuera: la app tampoco las cuenta y así el fichero adelgaza.
+
+Salida (junto a este script): index.json, cards.json y version.json.
 """
 import io
 import json
@@ -72,6 +83,29 @@ def color_identity(cards) -> str:
     return "".join(c for c in WUBRG if c in present)
 
 
+BASIC_LANDS = {"plains", "island", "swamp", "mountain", "forest", "wastes"}
+
+
+def is_basic_land(name: str) -> bool:
+    """Tierra básica, con o sin "Snow-Covered". Mismo criterio que la app, que no las cuenta."""
+    bare = name.lower().split("//")[0].strip()
+    if bare.startswith("snow-covered "):
+        bare = bare[len("snow-covered "):]
+    return bare in BASIC_LANDS
+
+
+def deck_card_counts(cards) -> dict:
+    """Cantidad por nombre de carta, sumando los tres tableros y sin tierras básicas."""
+    counts = {}
+    for card in cards:
+        name = (card.get("name") or "").strip()
+        count = card.get("count") or 0
+        if not name or count <= 0 or is_basic_land(name):
+            continue
+        counts[name] = counts.get(name, 0) + count
+    return counts
+
+
 def cover_id(commander, mainboard):
     """Carta de portada: el comandante; si no, la no-tierra de mayor coste; si no, la primera."""
     for card in commander:
@@ -99,6 +133,8 @@ def main() -> int:
 
     raw = fetch(ALL_DECKS_URL)
     decks = []
+    # fileName -> {nombre de carta: cantidad}, para cards.json.
+    deck_cards = {}
     with zipfile.ZipFile(io.BytesIO(raw)) as zf:
         for name in zf.namelist():
             if not name.lower().endswith(".json"):
@@ -116,8 +152,12 @@ def main() -> int:
                 continue  # no es un mazo jugable: fuera del índice
             commander = data.get("commander") or []
             mainboard = data.get("mainBoard") or []
+            file_name = os.path.basename(name)[:-5]  # quita ".json"
+            counts = deck_card_counts(commander + mainboard + (data.get("sideBoard") or []))
+            if counts:
+                deck_cards[file_name] = counts
             decks.append({
-                "f": os.path.basename(name)[:-5],  # quita ".json"
+                "f": file_name,
                 "n": data.get("name", ""),
                 "t": data.get("type", ""),
                 "cat": cat,
@@ -134,7 +174,29 @@ def main() -> int:
     with open(os.path.join(OUT_DIR, "version.json"), "w", encoding="utf-8") as f:
         json.dump({"version": version, "count": len(decks)}, f, ensure_ascii=False)
 
+    # cards.json: solo de los mazos que están en el índice (los tipos no jugables ya se filtraron).
+    kept = {d["f"] for d in decks}
+    names = []
+    name_index = {}
+    cards_out = {}
+    for file_name in sorted(k for k in deck_cards if k in kept):
+        pairs = []
+        for card_name, count in deck_cards[file_name].items():
+            idx = name_index.get(card_name)
+            if idx is None:
+                idx = len(names)
+                name_index[card_name] = idx
+                names.append(card_name)
+            pairs.append([idx, count])
+        cards_out[file_name] = pairs
+    cards = {"version": version, "names": names, "decks": cards_out}
+    cards_path = os.path.join(OUT_DIR, "cards.json")
+    with open(cards_path, "w", encoding="utf-8") as f:
+        json.dump(cards, f, ensure_ascii=False, separators=(",", ":"))
+
+    size_mb = os.path.getsize(cards_path) / (1024 * 1024)
     print(f"OK: {len(decks)} mazos, versión {version}")
+    print(f"cards.json: {len(cards_out)} mazos, {len(names)} cartas distintas, {size_mb:.1f} MB")
     return 0
 
 

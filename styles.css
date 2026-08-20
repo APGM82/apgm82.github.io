@@ -250,6 +250,10 @@ strong { font-weight: 600; }
 .store-badge:hover { opacity: .9; text-decoration: none; }
 .store-badge:active { transform: translateY(1px); }
 .store-badge img { height: 54px; width: auto; display: block; }
+/* Linux no tiene insignia oficial de tienda: va como botón, y debajo la nota de que está en
+   pruebas (el escáner por cámara no se ha podido verificar en esa plataforma). */
+.download-linux { margin: 28px 0 12px; }
+.download-note { color: var(--muted); font-size: .95rem; line-height: 1.5; max-width: 52ch; margin: 0 auto; }
 @media (max-width: 420px) { .store-badge img { height: 46px; } }
 
 /* ---------- Vídeo ---------- */

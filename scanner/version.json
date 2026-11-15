@@ -1,23 +1,23 @@
 {
-  "version": "2026-11-08",
+  "version": "2026-11-15",
   "model": "mana_v3",
   "dim": 512,
-  "count": 102234,
+  "count": 102326,
   "files": {
     "vectors_int8.bin": {
-      "sha256": "52d7e81ae6ded54a9cb2de0630847556d467283ca70c815dc77b270304fd74ad",
-      "size": 52343808,
-      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-08/vectors_int8.bin.gz"
+      "sha256": "74902f0f8e3713b0f8e9ecb4e9ecbf2fbacf7a73769309c9220449fbdbbeaa84",
+      "size": 52390912,
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-15/vectors_int8.bin.gz"
     },
     "scales.f32.bin": {
-      "sha256": "9207f180ec6e8465b1ad8a2cd517bd3358ca30d50c7448cc6c90533c99218428",
-      "size": 408936,
-      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-08/scales.f32.bin.gz"
+      "sha256": "e500bba0861741f543ffa8479b9dd77177a89d2d162c4420bac8df8d27a52b0a",
+      "size": 409304,
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-15/scales.f32.bin.gz"
     },
     "cards.tsv": {
-      "sha256": "a88464edc6db4c143a50e56ebc26d9a4ca6ce51692a669a98d036f187ee23e71",
-      "size": 16358538,
-      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-08/cards.tsv.gz"
+      "sha256": "e4d70e77fc5128ec6f75565784234bf64853bef8c76de8ed26dc58f1cf798b35",
+      "size": 16373213,
+      "url": "https://github.com/APGM82/apgm82.github.io/releases/download/scanner-2026-11-15/cards.tsv.gz"
     }
   },
   "modelFile": {
